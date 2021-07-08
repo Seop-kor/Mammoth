@@ -11,6 +11,8 @@
   <!-- Google Font Link -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
   <title id="text"></title>
+  <!-- Full Page Plugin Link -->
+  <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
   <!-- Reset CSS Link -->
   <link rel="stylesheet" href="css/reset.css">
   <!-- Main CSS Link -->
@@ -40,7 +42,9 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap" id="fullpage">
+
+    <div class="overlay"></div>
 
     <!-- PC Frame Header and Navigation -->
     <header class="header active" id="header">
@@ -52,6 +56,59 @@
           <span></span>
           <span></span>
         </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile_nav">
+          <ul class="mobile_inner">
+            <li class="mobile_li">
+              <div class="mobile_logo_box">
+                <a href="#" class="mobile_logo"></a>
+              </div>
+              <div class="close_btn">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">ABOUT US</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드커피</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                <li class="mobile_sub_li"><a href="#">신제품</a></li>
+                <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드 익스프레스</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">STORE</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
 
         <!-- PC Navigation -->
         <div class="logo">
@@ -146,7 +203,7 @@
     </header>
 
     <!-- Page 1 Section -->
-    <section class="page_1 section">
+    <section class="page_1 section" data-anchor="1st">
       <div class="main_msg">
         <div class="logo_box">
           <img src="img/page01_logo.png" alt="">
@@ -160,10 +217,16 @@
         </div>
       </div>
     </section>
+
+    <section class="page_2 section" data-anchor="2nd" style="background:red"></section>
+    <section class="page_3 section" data-anchor="3rd" style="background:yellow"></section>
   </div>
 
   <!-- jQuery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Full Page Plugin Load -->
+  <script src="fullpage_lib/jquery.fullpage.js"></script>
+  <script src="js/fullpage_code.js"></script>
   <!-- Main jQuery File Load -->
   <script src="js/jq.main.js"></script>
 </body>

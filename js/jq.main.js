@@ -67,15 +67,15 @@ $(function(){
   function resSize(autoLength){
     const liWidth = $(".slide_li").width() * autoLength;
     const liLength = $(".slide_li").width() * $(".slide_li").length;
-    $(".slide_box").width(liWidth);
+    $(".slide_box, .slides").width(liWidth);
     $(".slide_inner").width(liLength);
   } 
 
   $(window).resize(function(){
     const wWidth = $(window).width();
-    if(wWidth >= 800){
+    if(wWidth >= 700){
       resSize(3);
-    } else if(wWidth < 800){
+    } else if(wWidth < 700){
       resSize(2);
     }
   });
@@ -113,6 +113,11 @@ $(function(){
       $(".slide_inner").stop().animate({"margin-left" : slideCount * -liWidth}, 250);
     });
   }
+
+  $(window).resize(function(){
+    $(".slide_inner").stop().animate({"margin-left":0}, 100);
+    slideInit();
+  });
 
   slideInit();
 });
